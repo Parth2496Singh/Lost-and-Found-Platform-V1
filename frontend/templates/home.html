@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<div class="hero-section">
+    <h1>Reunite Lost Items Instantly!</h1>
+    <p>Next-gen Lost & Found platform</p>
+    <div class="mt-4">
+        <a class="btn hero-btn me-3" href="{% url 'report_lost' %}">Report Lost</a>
+        <a class="btn hero-btn" href="{% url 'report_found' %}">Report Found</a>
+    </div>
+</div>
+
+<!-- SEARCH BAR -->
+<div class="search-bar container">
+    <form class="d-flex" method="GET" action="{% url 'search' %}">
+        <input type="text" name="q" placeholder="Search for lost items...">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<!-- CARDS SECTION -->
+<div class="cards-section container">
+    <div class="card">
+        <h3>Lost Items</h3>
+        <p>Quickly report lost items with images and descriptions.</p>
+    </div>
+    <div class="card">
+        <h3>Found Items</h3>
+        <p>Report found items to help owners recover them fast.</p>
+    </div>
+    <div class="card">
+        <h3>Instant Search</h3>
+        <p>Search through all reports instantly with live results.</p>
+    </div>
+</div>
+
+{% endblock content %}

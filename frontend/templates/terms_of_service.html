@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- HERO TITLE -->
+<div class="hero-section" style="height:auto; padding:60px 20px; text-align:center;">
+    <h1 style="font-size:3rem; color:#ffea00; margin-bottom:1rem;">Terms of Service</h1>
+    <p style="font-size:1.2rem; color:#fff; opacity:0.9;">Please read these terms carefully before using Lost & Found Platform.</p>
+</div>
+
+<!-- CONTENT CARD -->
+<div class="container d-flex justify-content-center mb-5">
+    <div class="card" style="max-width:800px; width:100%; padding:3rem; background: rgba(255,255,255,0.05); 
+                             box-shadow: 0 15px 50px rgba(255,234,0,0.3); border-radius:25px; color:#fff; line-height:1.6;">
+        
+        <h3 style="color:#ffea00; margin-bottom:1rem;">1. Acceptance of Terms</h3>
+        <p>By using Lost & Found Platform, you agree to comply with these Terms of Service and all applicable laws.</p>
+
+        <h3 style="color:#ffea00; margin-bottom:1rem;">2. Use of Platform</h3>
+        <p>You may use this website to report lost or found items for personal use. You must not misuse the platform in any way.</p>
+
+        <h3 style="color:#ffea00; margin-bottom:1rem;">3. Account Responsibility</h3>
+        <p>If accounts are implemented, users are responsible for keeping account information confidential.</p>
+
+        <h3 style="color:#ffea00; margin-bottom:1rem;">4. Data & Privacy</h3>
+        <p>Your data is handled according to our <a href="{% url 'privacy_policy' %}" style="color:#00fff7;">Privacy Policy</a>.</p>
+
+        <h3 style="color:#ffea00; margin-bottom:1rem;">5. Prohibited Activities</h3>
+        <p>You may not use the platform to harass, defraud, or violate any laws. Posting false or misleading item reports is prohibited.</p>
+
+        <h3 style="color:#ffea00; margin-bottom:1rem;">6. Limitation of Liability</h3>
+        <p>The platform is provided "as is". Lost & Found Platform is not liable for any loss or damages arising from use of the site.</p>
+
+        <h3 style="color:#ffea00; margin-bottom:1rem;">7. Changes to Terms</h3>
+        <p>We may update these Terms of Service from time to time. Updates will be posted on this page.</p>
+
+        <h3 style="color:#ffea00; margin-bottom:1rem;">8. Contact</h3>
+        <p>If you have questions regarding these terms, contact us at <a href="mailto:support@lostfound.com" style="color:#00fff7;">support@lostfound.com</a>.</p>
+
+    </div>
+</div>
+
+{% endblock %}

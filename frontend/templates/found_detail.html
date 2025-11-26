@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container py-5">
+
+    <div id="detail-card" class="detail-card mx-auto" style="border-color:#00ff7f; box-shadow:0 0 30px rgba(0,255,127,0.4);">
+        <h1 id="item-name" class="detail-title" style="color:#00ff7f;"></h1>
+
+        <div class="detail-info">
+            <p><strong>Item ID:</strong> <span id="item-id"></span></p>
+            <p><strong>Location Found:</strong> <span id="item-location"></span></p>
+            <p><strong>Date Found:</strong> <span id="item-date"></span></p>
+            <p><strong>Description:</strong></p>
+            <p id="item-description" class="detail-desc" style="border-left-color:#00ff7f;"></p>
+        </div>
+
+        <a href="/dashboard/" class="btn hero-btn mt-3">Back to Dashboard</a>
+    </div>
+
+</div>
+
+
+<script>
+const itemId = "{{ id }}";
+
+fetch(`/api/found-items/${itemId}/`)
+    .then(res => res.json())
+    .then(item => {
+        document.getElementById("item-name").innerText = item.name;
+        document.getElementById("item-id").innerText = item.id;
+        document.getElementById("item-location").innerText = item.location;
+        document.getElementById("item-date").innerText = item.date_found;
+        document.getElementById("item-description").innerText = item.description;
+    })
+    .catch(error => console.error("Error fetching detail:", error));
+</script>
+
+
+<style>
+.detail-card {
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+}
+
+.detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.detail-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.detail-desc {
+    background: rgba(0,0,0,0.4);
+    padding: 12px;
+    border-radius: 10px;
+    border-left: 3px solid;
+}
+</style>
+
+{% endblock %}
