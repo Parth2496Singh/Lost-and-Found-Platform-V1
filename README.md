@@ -1,4 +1,5 @@
-# Lost & Found Platform (V1)
+# Lost & Found Platform (V1) ![Status](https://img.shields.io/badge/status-active-brightgreen) ![Version](https://img.shields.io/badge/version-1.0-blue)
+
 
 ## Table of Contents
 
@@ -72,7 +73,7 @@ requirements.txt # Python dependencies
 1. Clone the repository:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Parth2496Singh/Lost-and-Found-Platform-V1.git
 cd Lost-and-Found-Platform-V1
 ```
 
